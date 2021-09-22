@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/murmur3.h
+stdint.h
+-
+
+/root/huangqz/codes/filter/cuckoo/src/murmur3.c
+murmur3.h
+/root/huangqz/codes/filter/cuckoo/src/murmur3.h
+
