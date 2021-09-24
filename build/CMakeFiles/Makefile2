@@ -93,6 +93,7 @@ src/clean: src/CMakeFiles/cuckoo.dir/clean
 
 # Recursive "all" directory target.
 test/all: test/CMakeFiles/perform.dir/all
+test/all: test/CMakeFiles/utest.dir/all
 
 .PHONY : test/all
 
@@ -103,6 +104,7 @@ test/preinstall:
 
 # Recursive "clean" directory target.
 test/clean: test/CMakeFiles/perform.dir/clean
+test/clean: test/CMakeFiles/utest.dir/clean
 
 .PHONY : test/clean
 
@@ -159,6 +161,33 @@ perform: test/CMakeFiles/perform.dir/rule
 test/CMakeFiles/perform.dir/clean:
 	$(MAKE) -f test/CMakeFiles/perform.dir/build.make test/CMakeFiles/perform.dir/clean
 .PHONY : test/CMakeFiles/perform.dir/clean
+
+#=============================================================================
+# Target rules for target test/CMakeFiles/utest.dir
+
+# All Build rule for target.
+test/CMakeFiles/utest.dir/all: src/CMakeFiles/cuckoo.dir/all
+	$(MAKE) -f test/CMakeFiles/utest.dir/build.make test/CMakeFiles/utest.dir/depend
+	$(MAKE) -f test/CMakeFiles/utest.dir/build.make test/CMakeFiles/utest.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/huangqz/codes/filter/cuckoo/build/CMakeFiles --progress-num=8,9,10 "Built target utest"
+.PHONY : test/CMakeFiles/utest.dir/all
+
+# Build rule for subdir invocation for target.
+test/CMakeFiles/utest.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/huangqz/codes/filter/cuckoo/build/CMakeFiles 8
+	$(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/utest.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/huangqz/codes/filter/cuckoo/build/CMakeFiles 0
+.PHONY : test/CMakeFiles/utest.dir/rule
+
+# Convenience name for target.
+utest: test/CMakeFiles/utest.dir/rule
+
+.PHONY : utest
+
+# clean rule for target.
+test/CMakeFiles/utest.dir/clean:
+	$(MAKE) -f test/CMakeFiles/utest.dir/build.make test/CMakeFiles/utest.dir/clean
+.PHONY : test/CMakeFiles/utest.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

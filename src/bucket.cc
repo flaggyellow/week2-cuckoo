@@ -20,7 +20,7 @@ unsigned int Bucket::_applyMask(unsigned int *index){
 // standby: {0 - 首选位, 1 - 次选位}
 bool Bucket::avalable(unsigned int *index, int standby){
     unsigned int i = _applyMask(index);
-    return (( ( (*this->_bucket) [i]._occupy) & (0x01 << standby)) > 0);
+    return (( ( (*this->_bucket) [i]._occupy) & (0x01 << standby)) == 0);
 }
 
 int Bucket::record(unsigned int *index, int standby, fingerprint fp){
@@ -41,6 +41,10 @@ int Bucket::del(unsigned int *index, int standby){
     return S_OK;
 }
 
-Bucket::~Bucket(){
-    delete _bucket;
+int Bucket::getExpo(){
+    return this->_expo;
+}
+
+std::vector<container>* Bucket::getBucket(){
+    return this->_bucket;
 }

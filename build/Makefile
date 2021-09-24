@@ -136,6 +136,19 @@ perform/fast:
 	$(MAKE) -f test/CMakeFiles/perform.dir/build.make test/CMakeFiles/perform.dir/build
 .PHONY : perform/fast
 
+#=============================================================================
+# Target rules for targets named utest
+
+# Build rule for target.
+utest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 utest
+.PHONY : utest
+
+# fast build rule for target.
+utest/fast:
+	$(MAKE) -f test/CMakeFiles/utest.dir/build.make test/CMakeFiles/utest.dir/build
+.PHONY : utest/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -146,6 +159,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... cuckoo"
 	@echo "... perform"
+	@echo "... utest"
 .PHONY : help
 
 

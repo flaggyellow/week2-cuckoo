@@ -1,1 +1,1 @@
-/usr/bin/c++     CMakeFiles/perform.dir/performTest.cc.o  -o perform  -Wl,-rpath,/root/huangqz/codes/filter/cuckoo/build/src ../src/libcuckoo.so 
+/usr/bin/c++   -O0 -Wall -g2 -ggdb   CMakeFiles/perform.dir/performTest.cc.o  -o ../bin/perform  -Wl,-rpath,/root/huangqz/codes/filter/cuckoo/build/bin ../bin/libcuckoo.so 

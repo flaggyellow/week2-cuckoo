@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
+  "../bin/perform"
+  "../bin/perform.pdb"
   "CMakeFiles/perform.dir/performTest.cc.o"
-  "perform"
-  "perform.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

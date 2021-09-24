@@ -2,8 +2,11 @@
 #define _BUCKET_H_
 
 #include <vector>
+
 #define S_OK 0
-#define FAIL 1
+#define E_OUTOFKICK -1
+#define E_NOT_FOUND -2
+
 typedef unsigned int fingerprint;
 
 namespace cuckoo{
@@ -24,7 +27,9 @@ namespace cuckoo{
         int record(unsigned int *index, int standby, fingerprint fp);
         fingerprint fetch(unsigned int *index, int standby);
         int del(unsigned int *index, int standby);
-        ~Bucket();
+        int getExpo();
+        std::vector<container>* getBucket();
+        ~Bucket() = default;
     };
 
 }   // namespace cuckoo

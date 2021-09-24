@@ -3,13 +3,13 @@
 
 # compile C with /usr/bin/cc
 # compile CXX with /usr/bin/c++
-C_FLAGS = -fPIC  
+C_FLAGS = -g -fPIC  
 
 C_DEFINES = -Dcuckoo_EXPORTS
 
 C_INCLUDES = -I/root/huangqz/codes/filter/cuckoo/include 
 
-CXX_FLAGS = -fPIC   -std=c++11
+CXX_FLAGS =  -O0 -Wall -g2 -ggdb -fPIC   -std=c++11
 
 CXX_DEFINES = -Dcuckoo_EXPORTS
 

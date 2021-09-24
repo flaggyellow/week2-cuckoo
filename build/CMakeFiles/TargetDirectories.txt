@@ -4,5 +4,6 @@
 /root/huangqz/codes/filter/cuckoo/build/src/CMakeFiles/edit_cache.dir
 /root/huangqz/codes/filter/cuckoo/build/src/CMakeFiles/cuckoo.dir
 /root/huangqz/codes/filter/cuckoo/build/test/CMakeFiles/rebuild_cache.dir
-/root/huangqz/codes/filter/cuckoo/build/test/CMakeFiles/edit_cache.dir
 /root/huangqz/codes/filter/cuckoo/build/test/CMakeFiles/perform.dir
+/root/huangqz/codes/filter/cuckoo/build/test/CMakeFiles/edit_cache.dir
+/root/huangqz/codes/filter/cuckoo/build/test/CMakeFiles/utest.dir

@@ -35,19 +35,24 @@ void test(int num){
     for(int i = 0; i < num; i++) testSet.push_back(random_uuid_6());
     for(int i = 0; i < num; i++) retestSet.push_back(random_uuid_6());
     Cuckoofilter cf;
+    int fail_count = 0;
     clock_t start_time=clock();
     for(auto &s : testSet){
-        cf.insert(s);
+        int suc = cf.insert(s);
+        if(suc == E_OUTOFKICK) fail_count++;
     }
     clock_t end_time=clock();
     std::cout << "Add " << num << " elements to Bloom filter took: " <<(double)(end_time - start_time) / CLOCKS_PER_SEC << "s" << std::endl;
+    std::cout << fail_count << " elements failed to insert." << std::endl;
     start_time=clock();
     bool b;
+    fail_count = 0;
     for(auto &s : testSet){
         b = cf.lookup(s);
-        if(!b) std::cout << "error!!" << std::endl;
+        if(!b) fail_count++;
     }
     end_time=clock();
+    std::cout << fail_count << " elements not found." << std::endl;
     std::cout << "Query " << num << " elements to Bloom filter took: " <<(double)(end_time - start_time) / CLOCKS_PER_SEC << "s" << std::endl;
     int wcnt = 0;
     for(auto &s : retestSet){

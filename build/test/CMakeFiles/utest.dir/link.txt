@@ -1,0 +1,1 @@
+/usr/bin/c++   -O0 -Wall -g2 -ggdb   CMakeFiles/utest.dir/BucketTest.cc.o CMakeFiles/utest.dir/CuckooTest.cc.o  -o ../bin/utest  -Wl,-rpath,/root/huangqz/codes/filter/cuckoo/build/bin ../bin/libcuckoo.so /usr/local/lib/libCatch2Main.a /usr/local/lib/libCatch2.a 

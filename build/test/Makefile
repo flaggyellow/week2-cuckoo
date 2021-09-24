@@ -125,6 +125,75 @@ perform/fast:
 	cd /root/huangqz/codes/filter/cuckoo/build && $(MAKE) -f test/CMakeFiles/perform.dir/build.make test/CMakeFiles/perform.dir/build
 .PHONY : perform/fast
 
+# Convenience name for target.
+test/CMakeFiles/utest.dir/rule:
+	cd /root/huangqz/codes/filter/cuckoo/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/utest.dir/rule
+.PHONY : test/CMakeFiles/utest.dir/rule
+
+# Convenience name for target.
+utest: test/CMakeFiles/utest.dir/rule
+
+.PHONY : utest
+
+# fast build rule for target.
+utest/fast:
+	cd /root/huangqz/codes/filter/cuckoo/build && $(MAKE) -f test/CMakeFiles/utest.dir/build.make test/CMakeFiles/utest.dir/build
+.PHONY : utest/fast
+
+BucketTest.o: BucketTest.cc.o
+
+.PHONY : BucketTest.o
+
+# target to build an object file
+BucketTest.cc.o:
+	cd /root/huangqz/codes/filter/cuckoo/build && $(MAKE) -f test/CMakeFiles/utest.dir/build.make test/CMakeFiles/utest.dir/BucketTest.cc.o
+.PHONY : BucketTest.cc.o
+
+BucketTest.i: BucketTest.cc.i
+
+.PHONY : BucketTest.i
+
+# target to preprocess a source file
+BucketTest.cc.i:
+	cd /root/huangqz/codes/filter/cuckoo/build && $(MAKE) -f test/CMakeFiles/utest.dir/build.make test/CMakeFiles/utest.dir/BucketTest.cc.i
+.PHONY : BucketTest.cc.i
+
+BucketTest.s: BucketTest.cc.s
+
+.PHONY : BucketTest.s
+
+# target to generate assembly for a file
+BucketTest.cc.s:
+	cd /root/huangqz/codes/filter/cuckoo/build && $(MAKE) -f test/CMakeFiles/utest.dir/build.make test/CMakeFiles/utest.dir/BucketTest.cc.s
+.PHONY : BucketTest.cc.s
+
+CuckooTest.o: CuckooTest.cc.o
+
+.PHONY : CuckooTest.o
+
+# target to build an object file
+CuckooTest.cc.o:
+	cd /root/huangqz/codes/filter/cuckoo/build && $(MAKE) -f test/CMakeFiles/utest.dir/build.make test/CMakeFiles/utest.dir/CuckooTest.cc.o
+.PHONY : CuckooTest.cc.o
+
+CuckooTest.i: CuckooTest.cc.i
+
+.PHONY : CuckooTest.i
+
+# target to preprocess a source file
+CuckooTest.cc.i:
+	cd /root/huangqz/codes/filter/cuckoo/build && $(MAKE) -f test/CMakeFiles/utest.dir/build.make test/CMakeFiles/utest.dir/CuckooTest.cc.i
+.PHONY : CuckooTest.cc.i
+
+CuckooTest.s: CuckooTest.cc.s
+
+.PHONY : CuckooTest.s
+
+# target to generate assembly for a file
+CuckooTest.cc.s:
+	cd /root/huangqz/codes/filter/cuckoo/build && $(MAKE) -f test/CMakeFiles/utest.dir/build.make test/CMakeFiles/utest.dir/CuckooTest.cc.s
+.PHONY : CuckooTest.cc.s
+
 performTest.o: performTest.cc.o
 
 .PHONY : performTest.o
@@ -159,8 +228,15 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... edit_cache"
 	@echo "... perform"
+	@echo "... edit_cache"
+	@echo "... utest"
+	@echo "... BucketTest.o"
+	@echo "... BucketTest.i"
+	@echo "... BucketTest.s"
+	@echo "... CuckooTest.o"
+	@echo "... CuckooTest.i"
+	@echo "... CuckooTest.s"
 	@echo "... performTest.o"
 	@echo "... performTest.i"
 	@echo "... performTest.s"
