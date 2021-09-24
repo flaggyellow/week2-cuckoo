@@ -31,6 +31,7 @@ string random_uuid_6()
 }
 
 void test(int num){
+    std::cout << "--------" << num << " elements --------" << std::endl;
     std::vector<string> testSet, retestSet;
     for(int i = 0; i < num; i++) testSet.push_back(random_uuid_6());
     for(int i = 0; i < num; i++) retestSet.push_back(random_uuid_6());
@@ -59,12 +60,15 @@ void test(int num){
         b = cf.lookup(s);
         if(b) wcnt++;
     }
-    std::cout << "False positive rate: " << wcnt / (double)1000 * 100 << "%" << std::endl;
+    std::cout << "False positive rate: " << wcnt / (double)num * 100 << "%" << std::endl;
 }
 
 int main(int argc, char **argv){
+    test(500);
+    test(1000);
     test(10000);
     test(50000);
     test(100000);
+    test(300000);
     return 0;
 }
